@@ -27,7 +27,7 @@ def generate_training_set(image: cv2.Mat, hand_detect: Tuple[bool, list[float]])
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Training data generator')
-    parser.add_argument('name', type=int)
+    parser.add_argument('name', type=str)
     parser.add_argument('-i', '--iter', type=int, default=100)
 
     args = parser.parse_args()

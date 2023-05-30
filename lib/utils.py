@@ -52,8 +52,8 @@ def camera(fn: Callable[[cv2.Mat, Tuple[bool, list[float]]], None]):
 
                     (x, y), r = cv2.minEnclosingCircle(np.array(points))
 
-                    wist = hand_landmarks.landmark[0]
-                    distances = [sqrt((wist.x-other.x)**2+(wist.y-other.y)**2+(wist.z-other.z)**2)
+                    wrist = hand_landmarks.landmark[0]
+                    distances = [sqrt((wrist.x-other.x)**2+(wrist.y-other.y)**2+(wrist.z-other.z)**2)
                                  for other in hand_landmarks.landmark[1:]]
 
                     x_min, y_min = int(x - r), int(y - r)
